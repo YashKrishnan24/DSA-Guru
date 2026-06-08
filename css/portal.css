@@ -1,0 +1,379 @@
+/* Job Portal Component Styling */
+
+.job-portal-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+}
+
+/* Job Filters */
+.job-filters-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: start;
+}
+
+.filter-section {
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 20px;
+}
+.filter-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.filter-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+.checkbox-label:hover {
+  color: var(--text-main);
+}
+.checkbox-label input {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+/* Job Listing Area */
+.job-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.job-search-bar {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.job-card-left {
+  display: flex;
+  gap: 18px;
+}
+.company-logo-badge {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 22px;
+  font-family: var(--font-display);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+}
+.job-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.job-card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.job-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.job-card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.job-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.job-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.job-salary-range {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+.job-posted-time {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Kanban Tracking Board */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.kanban-column {
+  background: var(--bg-surface-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 500px;
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 12px;
+}
+.column-title {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.column-title-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.column-title-dot.applied { background: var(--primary); }
+.column-title-dot.interviewing { background: var(--secondary); }
+.column-title-dot.offer { background: var(--success); }
+.column-title-dot.rejected { background: var(--danger); }
+
+.column-count {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.kanban-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.kanban-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 14px;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+.kanban-card:hover {
+  border-color: var(--border-glass-hover);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.04);
+}
+.kanban-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.kanban-card-company {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.kanban-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.kanban-action-btn {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: 600;
+}
+.kanban-action-btn:hover {
+  text-decoration: underline;
+}
+
+/* Resume Builder layout */
+.resume-builder-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.resume-preview-panel {
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+  font-family: 'Inter', sans-serif;
+  overflow-y: auto;
+  max-height: 800px;
+  border: 1px solid #e2e8f0;
+}
+
+.resume-preview-header {
+  border-bottom: 2px solid #334155;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.resume-p-name {
+  font-size: 26px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+.resume-p-contact {
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.resume-preview-section {
+  margin-bottom: 20px;
+}
+.resume-preview-section-title {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #334155;
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.resume-preview-item {
+  margin-bottom: 12px;
+}
+.resume-preview-item-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
+  color: #0f172a;
+}
+.resume-preview-item-sub {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #475569;
+  font-style: italic;
+}
+.resume-preview-item-desc {
+  font-size: 12px;
+  color: #334155;
+  margin-top: 4px;
+  white-space: pre-wrap;
+}
+
+/* Tab Controls */
+.sub-tabs-container {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+}
+
+.sub-tab {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: 1px solid transparent;
+}
+.sub-tab:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.03);
+}
+.sub-tab.active {
+  color: var(--text-main);
+  background: var(--primary-glow);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+@media (max-width: 900px) {
+  .job-portal-layout {
+    grid-template-columns: 1fr;
+  }
+  .resume-builder-layout {
+    grid-template-columns: 1fr;
+  }
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .job-card-right {
+    align-items: flex-start;
+    width: 100%;
+    border-top: 1px solid var(--border-glass);
+    padding-top: 12px;
+  }
+}
