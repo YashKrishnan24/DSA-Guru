@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Guru - Prep & Job Portal</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/portal.css">
+  <link rel="stylesheet" href="css/prep.css">
+  <link rel="stylesheet" href="css/dsa.css">
+  <link rel="stylesheet" href="css/company.css">
+</head>
+<body>
+
+  <div id="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+      <div class="logo-container">
+        <div class="logo-icon">DG</div>
+        <span class="logo-text">DSA Guru</span>
+      </div>
+      
+      <nav style="flex: 1;">
+        <ul class="nav-links">
+          <li class="nav-item active" id="nav-dashboard">
+            <a href="#" onclick="App.navigate('dashboard')">
+              <span>📊</span> Dashboard Home
+            </a>
+          </li>
+          <li class="nav-item" id="nav-jobs">
+            <a href="#" onclick="App.navigate('jobs')">
+              <span>💼</span> Job Portal
+            </a>
+          </li>
+          <li class="nav-item" id="nav-prep">
+            <a href="#" onclick="App.navigate('prep')">
+              <span>📚</span> Prep Arena
+            </a>
+          </li>
+          <li class="nav-item" id="nav-company">
+            <a href="#" onclick="App.navigate('company')">
+              <span>🏢</span> Company Guides
+            </a>
+          </li>
+          <li class="nav-item" id="nav-dsa">
+            <a href="#" onclick="App.navigate('dsa')">
+              <span>⚡</span> DSA Sheets
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile" style="display: flex; flex-direction: column; align-items: stretch; gap: 12px; width: 100%;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="user-avatar" id="sidebar-user-avatar">AJ</div>
+            <div class="user-info">
+              <span class="username" id="sidebar-username">Alex Johnson</span>
+              <span class="userrole" id="sidebar-userrole">Premium Student</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 6px;" onclick="App.logout()">🚪 Log Out</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+      
+      <!-- Top header bar -->
+      <header class="top-header">
+        <div class="page-title">
+          <button class="hamburger-menu" onclick="App.toggleSidebar()" style="margin-right: 12px;">☰</button>
+          <h1 id="header-page-title">Dashboard</h1>
+          <p id="header-page-subtitle">Track your career preparation progress and job discovery.</p>
+        </div>
+
+        <div class="header-actions">
+          <button class="theme-toggle-btn" onclick="App.toggleTheme()" title="Toggle Dark/Light Mode">
+            <span id="theme-btn-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dynamic Screen Content -->
+      <div id="app-content">
+        <!-- Dashboard Home Content will be loaded here -->
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Authentication Lock Screen Overlay -->
+  <div id="login-overlay" class="modal-overlay" style="background: rgba(7, 9, 19, 0.96);">
+    <div class="modal-content glass-card" style="max-width: 420px; padding: 40px; text-align: center; border-color: rgba(99, 102, 241, 0.25); box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);">
+      <div class="logo-icon" style="margin: 0 auto 16px; width: 50px; height: 50px; font-size: 24px; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);">DG</div>
+      <h2 style="font-size: 26px; font-family: var(--font-display); margin-bottom: 8px;">DSA Guru Login</h2>
+      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 28px;">Welcome back! Sign in to access your coding sheets and prep portal.</p>
+      
+      <form id="login-form" onsubmit="App.handleLoginSubmit(event)">
+        <div class="form-group" style="text-align: left;">
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" class="form-control" placeholder="Enter username..." required value="Alex Johnson">
+        </div>
+        <div class="form-group" style="text-align: left;">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" class="form-control" placeholder="••••••••" required value="password123">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px; padding: 12px; font-weight: 700;">Sign In</button>
+        <button type="button" class="btn btn-secondary" style="width: 100%; margin-top: 12px; padding: 12px; font-size: 12px; font-weight: 600;" onclick="App.handleMockLogin()">⚡ Quick Demo Access</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Overlays -->
+  <div id="app-modal-overlay" class="modal-overlay">
+    <!-- Modal content will be dynamically loaded here -->
+  </div>
+
+  <!-- Script Files -->
+  <script src="js/data.js"></script>
+  <script src="js/portal.js"></script>
+  <script src="js/prep.js"></script>
+  <script src="js/dsa.js"></script>
+  <script src="js/company.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
