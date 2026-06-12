@@ -1,4 +1,4 @@
-# DSA Guru
+# DSA GURU
 
 > **All-in-One Computer Science Placement Preparation Arena & Interactive Job Tracking Portal.**
 
