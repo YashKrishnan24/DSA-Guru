@@ -41,7 +41,7 @@ DSA Guru is a premium, high-fidelity Single Page Application (SPA) designed to s
 * **Frontend Structure**: HTML5 (Semantic Structure)
 * **Styling & Theme Engine**: Modern HSL CSS variables, glassmorphic filters, and keyframe micro-animations (responsive Dark/Light mode overrides).
 * **Logic Controllers**: Component-based ES6 JavaScript.
-* **Persistence**: Synchronous state saving using the browser's localStorage API.
+* **Persistence**: Synchronous state saving using the browser's storage API.
 
 ---
 
