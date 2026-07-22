@@ -1,4 +1,4 @@
-# DSA GURU
+# DSA GURU:
 
 > **All-in-One Computer Science Placement Preparation Arena & Interactive Job Tracking Portal.**
 
@@ -6,7 +6,7 @@ DSA Guru is a premium, high-fidelity Single Page Application (SPA) designed to s
 
 ---
 
-## Key Features
+## Key Features:
 
 ### 1. Dashboard Overview:
 * **Real-time Analytics**: Displays overall progress indicators aggregated from localStorage (applied positions count, sheet checklist percentage, and quiz accuracy ratings).
